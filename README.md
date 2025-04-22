@@ -1,4 +1,4 @@
-# UUID Generator
+# UUID-Gen
 
 Generate UUIDs (Universally Unique Identifiers) quickly and easily with our free online UUID generator. No login required.
 
