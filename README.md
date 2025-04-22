@@ -9,5 +9,5 @@ Generate UUIDs (Universally Unique Identifiers) quickly and easily with our free
 
 ## Attributions
 
-- Background image from [Lummi](https://lummi.ai)
+- Background Image by [Cosmic Timetraveler](https://unsplash.com/@cosmictimetraveler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/aurora-phenomenon-LhDWW8PhPoE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - Created by [art70x](https://github.com/art70x)
