@@ -37,7 +37,7 @@ function copyUUID() {
       void status.offsetWidth
       setTimeout(() => {
         status.classList.add('fade-out')
-        setTimeout(() => (status.textContent = ''), 500)
+        setTimeout(() => (status.textContent = ''), 700)
       }, 1500)
     })
     .catch((err) => {
