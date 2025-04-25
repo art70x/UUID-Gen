@@ -1,43 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UUID Generator v4 - Fast, Secure & Free Online Tool</title>
+    <meta
+      name="description"
+      content="Generate UUIDs (Universally Unique Identifiers) instantly. Secure, open-source UUID v4 tool - no ads, no tracking, just results."
+    />
+    <meta
+      name="keywords"
+      content="UUID generator, online UUID tool, generate UUID, free uuid v4 generator, unique identifier generator"
+    />
+    <meta name="author" content="Art70x" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>UUID Generator | Free Online Tool</title>
-  <meta name="description" content="Generate UUIDs (Universally Unique Identifiers) quickly and easily with our free online UUID generator. No login required.">
-  <meta name="keywords" content="UUID generator, online UUID tool, generate UUID, free uuid v4 generator, unique identifier generator">
-  <meta name="author" content="Art70x">
-  
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="UUID Generator | Free Online Tool">
-  <meta property="og:description" content="Generate UUIDs quickly and easily. No signup needed. Instant, random, RFC-compliant UUID v4 generation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://art70x.github.io/uuid-gen/">
-  
-  <!-- Twitter Metadata -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="UUID Generator | Free Online Tool">
-  <meta name="twitter:description" content="Free online tool to generate RFC-compliant UUIDs instantly.">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://art70x.github.io/uuid-gen/">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="UUID Generator | Free Online Tool" />
+    <meta
+      property="og:description"
+      content="Generate UUIDs instantly. Secure, open-source UUID v4 tool - no ads, no tracking, just results."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://art70x.github.io/uuid-gen/" />
 
-<body>
-  <main class="bgc" role="main">
-    <h1>UUID Generator</h1>
-    <p class="desc">Generate unlimited v4 UUIDs for free and without ads</p>
-    <p id="uuid" aria-live="polite" aria-atomic="true">
-      Click the button to generate UUID
-    </p>
-    <button onclick="generateUUID()" aria-label="Generate a new UUID">Generate UUID</button>
-  </main>
-  <script src="main.js" defer></script>
-</body>
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="UUID Generator | Free Online Tool" />
+    <meta
+      name="twitter:description"
+      content="Generate UUIDs instantly. Secure, open-source UUID v4 tool - no ads, no tracking, just results."
+    />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://art70x.github.io/uuid-gen/" />
+
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <meta name="apple-mobile-web-app-status-bar" content="#0C121E" />
+    <meta name="theme-color" content="#eeeeee" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="bgc" role="main">
+      <h1>UUID Generator</h1>
+      <p class="desc">Generate unlimited v4 UUIDs for free and without ads</p>
+      <p id="uuid" aria-live="polite" aria-atomic="true">Click the button to generate UUID</p>
+      <button onclick="generateUUID()" aria-label="Generate a new UUID">Generate UUID</button>
+    </main>
+    <script src="main.js" defer></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker
+            .register('./sw.js')
+            .then((res) => console.log('service worker registered'))
+            .catch((err) => console.log('service worker not registered', err))
+        })
+      }
+    </script>
+  </body>
 </html>
