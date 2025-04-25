@@ -21,7 +21,7 @@ function createUUID() {
         }
     }
     return uuid;
-    
+
     // in short
     // cryto.randomUUID()
 }
@@ -37,10 +37,25 @@ function copyUUID() {
       void status.offsetWidth
       setTimeout(() => {
         status.classList.add('fade-out')
-        setTimeout(() => (status.textContent = ''), 700)
-      }, 1500)
+        setTimeout(() => (status.textContent = ''), 800)
+      }, 1000)
     })
     .catch((err) => {
       console.error('Failed to copy UUID:', err)
     })
 }
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === '/') {
+    generateUUID()
+    event.preventDefault()
+  }
+})
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'c') {
+    generateUUID()
+    copyUUID()
+    event.preventDefault()
+  }
+})
+document.getElementById('year').textContent = new Date().getFullYear()

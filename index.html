@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="language" content="English" />
-    <meta name="author" content="Farhan Madni" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="application-name" content="UUID Gen" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="UUID Gen" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>UUID Generator - Fast, Secure & Free Online Tool</title>
     <meta
       name="description"
       content="Generate UUIDs (Universally Unique Identifiers) instantly. Secure, open-source UUID v4 tool - no ads, no tracking, just results."
@@ -52,19 +50,55 @@
     <meta name="apple-mobile-web-app-status-bar" content="#0C121E" />
     <meta name="theme-color" content="#f3f4f6" />
 
+    <title>UUID Generator - Fast, Secure & Free Online Tool</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "UUID Generator",
+        "url": "https://art70x.github.io/uuid-gen/",
+        "applicationCategory": "Utility",
+        "applicationSubCategory": "Uniqueness, Programming",
+        "browserRequirements": "Requires JavaScript",
+        "storageRequirements": "1MB",
+        "softwareVersion": "v1-alpha",
+        "description": "Generate UUIDs (Universally Unique Identifiers) instantly. Secure, open-source UUID v4 tool - no ads, no tracking, just results.",
+        "author": {
+          "@type": "Person",
+          "name": "Art70x"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Art70x"
+        }
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <main class="bgc" role="main">
-      <h1>UUID Generator</h1>
-      <p class="desc">Generate unlimited v4 UUIDs for free and without ads</p>
-      <p id="uuid" aria-live="polite" aria-atomic="true">Click the button to generate UUID</p>
-      <button onclick="generateUUID()" aria-label="Generate a new UUID">Generate UUID</button>
-      <button onclick="copyUUID()" aria-label="Copy the UUID to clipboard">Copy</button>
-      <p id="status" role="status" aria-live="polite"></p>
-    </main>
+    <div class="bgc">
+      <main role="main">
+        <h1>UUID Generator</h1>
+        <p class="desc">Generate unlimited v4 UUIDs for free and without ads</p>
+        <p id="uuid" aria-live="polite" aria-atomic="true">Click the button to generate UUID</p>
+        <button onclick="generateUUID()" aria-label="Generate a new UUID">Generate UUID</button>
+        <button onclick="copyUUID()" aria-label="Copy the UUID to clipboard">Copy</button>
+        <p id="status" class="fade-out" role="status" aria-live="polite"></p>
+      </main>
+    </div>
+    <footer>
+      🔒 100% client-side. No tracking. No ads. <br />
+      &copy; <span id="year"></span> <a href="https://github.com/art70x" target="_blank">art70x</a>.
+      All rights reserved
+    </footer>
     <script src="main.js" defer></script>
     <script>
       if ('serviceWorker' in navigator) {
