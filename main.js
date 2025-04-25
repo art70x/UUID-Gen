@@ -31,7 +31,7 @@ function copyUUID() {
   navigator.clipboard
     .writeText(uuid)
     .then(() => {
-      const status = document.getElementById('copy-status')
+      const status = document.getElementById('status')
       status.textContent = 'UUID copied to clipboard!'
       status.classList.remove('fade-out')
       void status.offsetWidth
