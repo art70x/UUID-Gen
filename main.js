@@ -25,3 +25,22 @@ function createUUID() {
     // in short
     // cryto.randomUUID()
 }
+
+function copyUUID() {
+  const uuid = document.getElementById('uuid').textContent
+  navigator.clipboard
+    .writeText(uuid)
+    .then(() => {
+      const status = document.getElementById('copy-status')
+      status.textContent = 'UUID copied to clipboard!'
+      status.classList.remove('fade-out')
+      void status.offsetWidth
+      setTimeout(() => {
+        status.classList.add('fade-out')
+        setTimeout(() => (status.textContent = ''), 500)
+      }, 1500)
+    })
+    .catch((err) => {
+      console.error('Failed to copy UUID:', err)
+    })
+}
