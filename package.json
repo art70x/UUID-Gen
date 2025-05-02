@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p build && cp *.html *.css *.js -t build/ && cp -r assets build/assets",
-    "format": "prettier -w 'build/**/*.{html,css,js}'",
-    "postbuild": "npm run format"
+    "postbuild": "npm run format",
+    "preview": "servez -p 3000 build",
+    "format": "prettier -w 'build/**/*.{html,css,js}'"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
     "prettier-plugin-css-order": "^2.1.2",
-    "prettier-plugin-organize-attributes": "^1.0.0"
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "servez": "^2.3.0"
   }
 }
